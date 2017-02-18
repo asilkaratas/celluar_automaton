@@ -1,2 +1,2 @@
-# celluar_automaton
+# CelluarAutomaton
 Celluar Automaton implementation in Java

@@ -1,0 +1,23 @@
+States
+[[color] [name]]
+[[color] [name]]
+[[color] [name]]
+
+Rules
+[SimpleRule 
+[[startState] [endState] [name]
+[states]]]
+[SimpleRule 
+[[startState] [endState] [name]
+[states]]]
+[ComplexRule
+[[startState] [endState] [name]
+Schemas
+[SimpleSchema [row] [column] [state]]
+[SimpleSchema [row] [column] [state]]
+[ComplexSchema [location] [locationNum] [quantity] [quantityNum] [state]]]]
+
+
+
+
+

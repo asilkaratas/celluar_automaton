@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'eclipse' 
+
+
+group = 'com.individualproject'
+version = '1.0'
+
+test {
+    testLogging.showStandardStreams = true
+}
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	compile 'log4j:log4j:1.2.16'
+	compile 'it.unimi.dsi:fastutil:7.0.12'
+	compile group: 'org.reactfx', name: 'reactfx', version: '1.4.1'
+	compile 'org.apache.commons:commons-lang3:3.0'
+	compile files('lib/javafx-dialogs-0.0.4.jar')
+	
+	testCompile 'junit:junit:4.12'
+	testCompile 'org.mockito:mockito-all:1.8.4'
+}
