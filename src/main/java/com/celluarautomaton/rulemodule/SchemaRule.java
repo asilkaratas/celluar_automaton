@@ -163,10 +163,6 @@ public class SchemaRule extends Rule {
 	
 	@Override
 	public boolean matches(Pattern pattern) {
-		// TODO Auto-generated method stub
-		//logger.info("matchesa:" + pattern);
-		//logger.info("matchesb:" + this.pattern);
-		
 		if(!pattern.contains(this.pattern)) {
 			return false;
 		}

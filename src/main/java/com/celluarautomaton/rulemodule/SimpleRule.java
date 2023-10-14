@@ -94,9 +94,7 @@ public class SimpleRule extends Rule {
 
 	@Override
 	public boolean matches(Pattern pattern) {
-		boolean result = pattern.contains(this.pattern);
-		//logger.info("matches:" + result  + "\n" + this.pattern + "\n" + pattern);
-		return result;
+		return pattern.contains(this.pattern);
 	}
 	
 }
