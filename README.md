@@ -63,17 +63,17 @@ public class Pattern {
     }
 
     /** 5x5 grid is calculated into a pattern. */
-	public void calculate(State[] states) {
-		reset();
-		
-		for(int i = 0; i < 21; ++i) {
-			setFirstWord(states[i].getValue(), i);
-		}
-		
-		for(int i = 0; i < 4; ++i) {
-			setSecondWord(states[i + 21].getValue(), i);
-		}
-	}
+    public void calculate(State[] states) {
+        reset();
+
+        for(int i = 0; i < 21; ++i) {
+            setFirstWord(states[i].getValue(), i);
+        }
+
+        for(int i = 0; i < 4; ++i) {
+            setSecondWord(states[i + 21].getValue(), i);
+        }
+    }
 
     /** Checks if given pattern is contained in this pattern. */
     public boolean contains(Pattern pattern) {
@@ -96,26 +96,26 @@ public class Cell {
     ...
 
     public void calculatePatternValue() {
-		pattern.reset();
-		for(int i = 0; i < 21; ++i) {
-			Cell cell = neighbors[i];
-			if(cell != null) {
-				pattern.setFirstWord(cell.getState().getValue(), i);
-			} else {
-				pattern.setFirstWord(State.EMPTY.getValue(), i);
-			}
-		}
-		
-		for(int i = 0; i < 4; ++i) {
-			Cell cell = neighbors[i + 21];
-			if(cell != null) {
-				pattern.setSecondWord(cell.getState().getValue(), i);
-			} else {
-				pattern.setSecondWord(State.EMPTY.getValue(), i);
-			}
-		}
-	}
-}
+        pattern.reset();
+        for(int i = 0; i < 21; ++i) {
+            Cell cell = neighbors[i];
+            if(cell != null) {
+                pattern.setFirstWord(cell.getState().getValue(), i);
+            } else {
+                pattern.setFirstWord(State.EMPTY.getValue(), i);
+            }
+        }
+        
+        for(int i = 0; i < 4; ++i) {
+            Cell cell = neighbors[i + 21];
+            if(cell != null) {
+                pattern.setSecondWord(cell.getState().getValue(), i);
+            } else {
+                pattern.setSecondWord(State.EMPTY.getValue(), i);
+            }
+        }
+    }
+    }
 ```
 
 ### Simple Rule
@@ -126,8 +126,8 @@ public class SimpleRule {
     ...
 
     public boolean matches(Pattern pattern) {
-		return pattern.contains(this.pattern);
-	}
+        return pattern.contains(this.pattern);
+    }
 }
 ```
 
